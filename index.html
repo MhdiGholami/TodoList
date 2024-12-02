@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Todolist Project</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- TODO title -->
+    <h1 class="todo-title">TODO</h1>
+    <!-- Add item row -->
+    <div class="addItem-row">
+      <input class="addItem-input" type="text" name="add" placeholder="Add item..." spellcheck="false">
+      <div id="plus-btn" class="addItem-icon">
+        <img id="plusBtn-img" src="assets/img/plus_icon.svg" alt="">
+      </div>
+      <div id="retry-btn" style="display: none;" class="addItem-icon">
+        <img id="plusBtn-img" src="assets/img/retry_icon.svg" alt="">
+      </div>
+    </div>
+    <!-- filter items row -->
+    <div class="filterItem-row">
+      <select class="filter" name="" id="selectOpt">
+        <option value="All">All</option>
+        <option value="Undo">Undo</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+    <!-- List of items row -->
+    <ul id="completedPage-div" style="width: 100%; margin-top: 40px; display: none;"></ul>
+    <ul id="todolist" class="todo-list">
+      <li class="todo-item">
+        <div id="todo1Ls" class="todo1-ls">
+          <div onclick="checkboxChange(event)" style="position: absolute; width: 100%; height: 100%;"></div>
+          <input id="checkbox1" class="todo1-checkbox" type="checkbox" value="show">
+          <img id="tick1" style="display: none;" class="todo-tick" src="assets/img/tick_icon.svg" alt="">
+          <span id="todo-text1" class="todo1-title">Booking hotel</span>
+        </div>
+        <div class="todo1-rs">
+          <div id="edit-icon" onclick="editItem(event)">
+            <img style="margin-right: 15px;" class="todo1-icon" src="assets/img/edit_icon.svg" alt="">
+          </div>
+          <div onclick="deleteItem(event)">
+            <img class="todo1-icon" src="assets/img/delete_icon.svg" alt="">
+          </div>
+        </div>
+      </li>
+      <li class="todo-item">
+        <div id="todo2Ls" class="todo1-ls">
+          <div onclick="checkboxChange(event)" style="position: absolute; width: 100%; height: 100%;"></div>
+          <input id="checkbox2" class="todo1-checkbox" type="checkbox" value="show">
+          <img id="tick2" style="display: none;" class="todo-tick" src="assets/img/tick_icon.svg" alt="">
+          <span id="todo-text2" class="todo1-title">Buy flight tickets</span>
+        </div>
+        <div class="todo1-rs">
+          <div id="edit-icon" onclick="editItem(event)">
+            <img style="margin-right: 15px;" class="todo1-icon" src="assets/img/edit_icon.svg" alt="">
+          </div>
+          <div onclick="deleteItem(event)">
+            <img class="todo1-icon" src="assets/img/delete_icon.svg" alt="">
+          </div>
+        </div>
+      </li>
+      <li class="todo-item">
+        <div id="todo3Ls" class="todo1-ls">
+          <div onclick="checkboxChange(event)" style="position: absolute; width: 100%; height: 100%;"></div>
+          <input id="checkbox3" class="todo1-checkbox" type="checkbox" value="show">
+          <img id="tick3" style="display: none;" class="todo-tick" src="assets/img/tick_icon.svg" alt="">
+          <span id="todo-text3" class="todo1-title">Looking up for landscape</span>
+        </div>
+        <div class="todo1-rs">
+          <div id="edit-icon" onclick="editItem(event)">
+            <img style="margin-right: 15px;" class="todo1-icon" src="assets/img/edit_icon.svg" alt="">
+          </div>
+          <div onclick="deleteItem(event)">
+            <img class="todo1-icon" src="assets/img/delete_icon.svg" alt="">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
